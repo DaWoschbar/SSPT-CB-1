@@ -10,6 +10,12 @@
             Console.Write("Enter weight in kg: ");
             double weight = double.Parse(Console.ReadLine());
 
+            if (height <= 0 ||weight <= 0)
+            {
+                Console.WriteLine("Error: Wrong input.");
+                return;
+            }
+
             double bmi = weight / (height * height);
 
             Console.WriteLine($"Your BMI is: {Math.Round(bmi, 2)}");
