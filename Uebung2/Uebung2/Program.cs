@@ -4,37 +4,45 @@
     {
         static void Main(string[] args)
         {
-            Console.Write("Enter height in m: ");
-            double height = double.Parse(Console.ReadLine());
-
-            Console.Write("Enter weight in kg: ");
-            double weight = double.Parse(Console.ReadLine());
-
-            if (height <= 0 ||weight <= 0)
+            try
             {
-                Console.WriteLine("Error: Wrong input.");
-                return;
+                Console.Write("Enter height in m: ");
+                double height = double.Parse(Console.ReadLine());
+
+                Console.Write("Enter weight in kg: ");
+                double weight = double.Parse(Console.ReadLine());
+
+                if (height <= 0 || weight <= 0)
+                {
+                    Console.WriteLine("Error: Wrong input.");
+                    return;
+                }
+
+                double bmi = weight / (height * height);
+
+                Console.WriteLine($"Your BMI is: {bmi:F2}");
+
+                Console.Write("According to your BMI you are ");
+
+                if (bmi < 18.5)
+                {
+                    Console.Write("underweight.");
+                }
+                else if (bmi > 25)
+                {
+                    Console.Write("overweight.");
+                }
+                else
+                {
+                    Console.Write("normal.");
+                }
+
             }
-
-            double bmi = weight / (height * height);
-
-            Console.WriteLine($"Your BMI is: {Math.Round(bmi, 2)}");
-
-            Console.WriteLine("According to your BMI you are ");
-
-            if (bmi < 18.5)
+            catch (Exception)
             {
-                Console.Write("underweight.");
-            }
-            else if (bmi > 25)
-            {
-                Console.Write("overweight.");
-            }
-            else
-            {
-                Console.Write("normal.");
-            }
 
+                Console.WriteLine("Oh no something went wrong :(");
+            }
         }
     }
 }

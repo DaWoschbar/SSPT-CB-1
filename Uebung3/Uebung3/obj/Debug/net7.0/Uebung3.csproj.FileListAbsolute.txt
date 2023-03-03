@@ -1,0 +1,15 @@
+C:\Users\Schabus\OneDrive - Fachhochschule St. Pölten\2. Semester\SSPT-CB\Projects\SSPT-CB-1\Uebung3\Uebung3\bin\Debug\net7.0\Uebung3.exe
+C:\Users\Schabus\OneDrive - Fachhochschule St. Pölten\2. Semester\SSPT-CB\Projects\SSPT-CB-1\Uebung3\Uebung3\bin\Debug\net7.0\Uebung3.deps.json
+C:\Users\Schabus\OneDrive - Fachhochschule St. Pölten\2. Semester\SSPT-CB\Projects\SSPT-CB-1\Uebung3\Uebung3\bin\Debug\net7.0\Uebung3.runtimeconfig.json
+C:\Users\Schabus\OneDrive - Fachhochschule St. Pölten\2. Semester\SSPT-CB\Projects\SSPT-CB-1\Uebung3\Uebung3\bin\Debug\net7.0\Uebung3.dll
+C:\Users\Schabus\OneDrive - Fachhochschule St. Pölten\2. Semester\SSPT-CB\Projects\SSPT-CB-1\Uebung3\Uebung3\bin\Debug\net7.0\Uebung3.pdb
+C:\Users\Schabus\OneDrive - Fachhochschule St. Pölten\2. Semester\SSPT-CB\Projects\SSPT-CB-1\Uebung3\Uebung3\obj\Debug\net7.0\Uebung3.csproj.AssemblyReference.cache
+C:\Users\Schabus\OneDrive - Fachhochschule St. Pölten\2. Semester\SSPT-CB\Projects\SSPT-CB-1\Uebung3\Uebung3\obj\Debug\net7.0\Uebung3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Schabus\OneDrive - Fachhochschule St. Pölten\2. Semester\SSPT-CB\Projects\SSPT-CB-1\Uebung3\Uebung3\obj\Debug\net7.0\Uebung3.AssemblyInfoInputs.cache
+C:\Users\Schabus\OneDrive - Fachhochschule St. Pölten\2. Semester\SSPT-CB\Projects\SSPT-CB-1\Uebung3\Uebung3\obj\Debug\net7.0\Uebung3.AssemblyInfo.cs
+C:\Users\Schabus\OneDrive - Fachhochschule St. Pölten\2. Semester\SSPT-CB\Projects\SSPT-CB-1\Uebung3\Uebung3\obj\Debug\net7.0\Uebung3.csproj.CoreCompileInputs.cache
+C:\Users\Schabus\OneDrive - Fachhochschule St. Pölten\2. Semester\SSPT-CB\Projects\SSPT-CB-1\Uebung3\Uebung3\obj\Debug\net7.0\Uebung3.dll
+C:\Users\Schabus\OneDrive - Fachhochschule St. Pölten\2. Semester\SSPT-CB\Projects\SSPT-CB-1\Uebung3\Uebung3\obj\Debug\net7.0\refint\Uebung3.dll
+C:\Users\Schabus\OneDrive - Fachhochschule St. Pölten\2. Semester\SSPT-CB\Projects\SSPT-CB-1\Uebung3\Uebung3\obj\Debug\net7.0\Uebung3.pdb
+C:\Users\Schabus\OneDrive - Fachhochschule St. Pölten\2. Semester\SSPT-CB\Projects\SSPT-CB-1\Uebung3\Uebung3\obj\Debug\net7.0\Uebung3.genruntimeconfig.cache
+C:\Users\Schabus\OneDrive - Fachhochschule St. Pölten\2. Semester\SSPT-CB\Projects\SSPT-CB-1\Uebung3\Uebung3\obj\Debug\net7.0\ref\Uebung3.dll
