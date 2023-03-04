@@ -36,7 +36,7 @@ namespace Uebung8
             }
             catch (Exception e)
             {
-                Console.WriteLine("Something went wront");
+                Console.WriteLine("Something went wrong");
                 Console.WriteLine(e.ToString());
             }
         }
@@ -77,7 +77,7 @@ namespace Uebung8
         {
             try
             {
-                if(_passwordList.Contains(input))
+                if (_passwordList.Contains(input))
                 {
                     Console.WriteLine("Password already in list.");
                     return;
@@ -98,7 +98,18 @@ namespace Uebung8
                 while (true)
                 {
                     Console.Write("Enter index to delete item: ");
-                    int index = int.Parse(Console.ReadLine());
+                    string? input = Console.ReadLine();
+                    int index;
+
+                    bool isNumber = int.TryParse(input, out index);
+
+                    if (String.IsNullOrEmpty(input) || !isNumber)
+                    {
+                        Console.WriteLine("Not a number");
+                        continue;
+                    }
+
+                    
 
                     if (index > _passwordList.Count || index < 0)
                     {
@@ -113,7 +124,7 @@ namespace Uebung8
             catch (Exception e)
             {
                 throw new Exception(e.ToString());
-            }   
+            }
         }
 
         private static void PrintOptions()
