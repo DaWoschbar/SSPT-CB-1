@@ -1,0 +1,15 @@
+C:\github\SSPT-CB-1\Uebung7\Uebung7\obj\Debug\net7.0\Uebung7.csproj.AssemblyReference.cache
+C:\github\SSPT-CB-1\Uebung7\Uebung7\obj\Debug\net7.0\Uebung7.GeneratedMSBuildEditorConfig.editorconfig
+C:\github\SSPT-CB-1\Uebung7\Uebung7\obj\Debug\net7.0\Uebung7.AssemblyInfoInputs.cache
+C:\github\SSPT-CB-1\Uebung7\Uebung7\obj\Debug\net7.0\Uebung7.AssemblyInfo.cs
+C:\github\SSPT-CB-1\Uebung7\Uebung7\obj\Debug\net7.0\Uebung7.csproj.CoreCompileInputs.cache
+C:\github\SSPT-CB-1\Uebung7\Uebung7\bin\Debug\net7.0\Uebung7.exe
+C:\github\SSPT-CB-1\Uebung7\Uebung7\bin\Debug\net7.0\Uebung7.deps.json
+C:\github\SSPT-CB-1\Uebung7\Uebung7\bin\Debug\net7.0\Uebung7.runtimeconfig.json
+C:\github\SSPT-CB-1\Uebung7\Uebung7\bin\Debug\net7.0\Uebung7.dll
+C:\github\SSPT-CB-1\Uebung7\Uebung7\bin\Debug\net7.0\Uebung7.pdb
+C:\github\SSPT-CB-1\Uebung7\Uebung7\obj\Debug\net7.0\Uebung7.dll
+C:\github\SSPT-CB-1\Uebung7\Uebung7\obj\Debug\net7.0\refint\Uebung7.dll
+C:\github\SSPT-CB-1\Uebung7\Uebung7\obj\Debug\net7.0\Uebung7.pdb
+C:\github\SSPT-CB-1\Uebung7\Uebung7\obj\Debug\net7.0\Uebung7.genruntimeconfig.cache
+C:\github\SSPT-CB-1\Uebung7\Uebung7\obj\Debug\net7.0\ref\Uebung7.dll
