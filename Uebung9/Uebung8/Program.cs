@@ -105,21 +105,29 @@ namespace Uebung8
 
         private static string GetObfuscatedUserInput()
         {
-            string input = "";
-            while (true)
+            try
             {
-                ConsoleKeyInfo key = Console.ReadKey(true);
-                Debug.WriteLine($"CKI KEY: {key.Key}");
-                Debug.WriteLine($"CKI KEY CHAR: {key.KeyChar}");
+                string input = "";
+                while (true)
+                {
+                    ConsoleKeyInfo key = Console.ReadKey(true);
+                    Debug.WriteLine($"CKI KEY: {key.Key}");
+                    Debug.WriteLine($"CKI KEY CHAR: {key.KeyChar}");
 
-                if (key.Key == ConsoleKey.Enter)
-                    break;
-                input += key.KeyChar;
-                Console.Write("*");
+                    if (key.Key == ConsoleKey.Enter)
+                        break;
+                    input += key.KeyChar;
+                    Console.Write("*");
+                }
+                Console.WriteLine();
+
+                return input;
             }
-            Console.WriteLine();
+            catch (Exception ex)
+            {
 
-            return input;
+                throw new Exception(ex.Message);
+            }
         }
 
         private static void DeleteEntry()
