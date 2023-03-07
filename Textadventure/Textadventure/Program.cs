@@ -49,6 +49,8 @@ namespace Textadventure
             WriteStory("Good luck on your quest!");
 
         }
+
+        #region Rooms and text
         private static void Room1()
         {
             bool keyFound = false;
@@ -198,6 +200,7 @@ namespace Textadventure
                 Good luck on your next adventure!
                 """);
         }
+        #endregion
         private static void PrintFancyHeading(string text)
         {
             Console.WriteLine($"\n\n################# {text} #################");
