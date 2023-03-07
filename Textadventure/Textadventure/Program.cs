@@ -6,7 +6,7 @@ namespace Textadventure
     internal class Program
     {
         //fields needed to check if the input is valid
-        private static List<String> allowedCommands = new List<String>() { "n", "e", "w", "s", "u", "x", "a", "clear" };
+        private static List<String> allowedCommands = new List<String>() { "n", "e", "w", "s", "u", "x", "a", "help" };
 
         //value defines the current room starting at 1 for better understanding
         private static int currentRoomNumber = 1;
@@ -14,22 +14,27 @@ namespace Textadventure
         {
 
             PrintIntroduction();
+            Thread.Sleep(2);
             PrintHelp();
+            Thread.Sleep(2);
             Room1();
+            Room2();
+            Room3();
+            PrintEnding();
 
         }
 
         private static void PrintHelp()
         {
             Console.WriteLine("\n");
-            Console.WriteLine("a\t... describe the current room");
+            Console.WriteLine("a\t... clear console and redescribe the current room");
             Console.WriteLine("u [item]\t ... use an item");
             Console.WriteLine("n\t... go north");
             Console.WriteLine("w\t... go west");
             Console.WriteLine("e\t... to east");
             Console.WriteLine("s\t... go south");
             Console.WriteLine("x\t... end your adventure (exit)");
-            Console.WriteLine("clear\t ... clear the terminal and reprint the text from the current room");
+            Console.WriteLine("help\t... this help screen");
         }
 
         private static void PrintIntroduction()
@@ -50,11 +55,11 @@ namespace Textadventure
         private static void Room1()
         {
             bool keyFound = false;
-            PrintRoom1();
+            PrintRoomDescription1();
 
             while (true)
             {
-                string input = Console.ReadLine();
+                string input = Console.ReadLine().ToLower();
 
                 if (!CheckInput(input)) 
                 {
@@ -85,7 +90,7 @@ namespace Textadventure
 
                     while(true)
                     {
-                        input = Console.ReadLine();
+                        input = Console.ReadLine().ToLower();
 
                         if (!CheckInput(input))
                         {
@@ -103,7 +108,7 @@ namespace Textadventure
             Console.WriteLine("You open the door and walk into the other room.");
         }
 
-        private static void PrintRoom1()
+        private static void PrintRoomDescription1()
         {
             PrintFancyHeading("The Entrance Hall");
 
@@ -114,23 +119,76 @@ namespace Textadventure
                 """);
         }
 
+        private static void Room2()
+        {
+            currentRoomNumber++;
+            bool boulderMoved = false;
+
+            PrintRoomDescription2();
+
+            while (true)
+            {
+                string input = Console.ReadLine().ToLower();
+
+                if (input.StartsWith("u") && input.Contains("chess"))
+                {
+                    Console.WriteLine("""
+                       You move the chess piece entlong the weird lines to the end. 
+                       Suddenly the room starts to shake and the boulder beings to move towards the right side of the room revealing an entrance to another part of the castle.
+                       """);
+                    boulderMoved = true;
+                }
+                else if (input.StartsWith("n") && boulderMoved)
+                {
+                    Console.WriteLine("You walk towards the entrance and walk right through it.");
+                    break;
+                }
+            }
+        }
+
         private static void PrintRoomDescription2()
         {
-
             PrintFancyHeading("The Puzzle Room");
 
             Console.WriteLine("""
                 You enter a room filled with puzzles. In the center of the room is a large chessboard. 
-                On the wall, there are three levers, each with a symbol on it: a sun, a moon, and a star. There is also a door leading to the next room.
-                """);
-
-            Console.WriteLine("""
-                Use the levers to unlock the door. 
-                The parchment from the first room has a riddle that provides clues on which lever to pull in which order. 
-                Pull the levers in the correct order, and the door will unlock.
+                On the chessboard is a single chess piece right in the middle. The cheesboard is kind of strange, it has some weird lines on it.
+                Behind the board is a boulder which seems unmoveable by a normal human being.
                 """);
         }
+        private static void Room3()
+        {
+            currentRoomNumber++;
+            PrintRoomDescription3();
 
+            bool handUsed = false;
+
+            while (true)
+            {
+                string input = Console.ReadLine().ToLower();
+
+                if (CheckInput(input))
+                {
+                    if (input.StartsWith("n"))
+                    {
+                        Console.WriteLine("""
+                            You walk towards the box and find the golden key. It's aura is almost frighenting, but the key itself shines in a nice golden tone.
+                            But it is behind some glass that cannot be destroyed. After inspecting the glass some more you realize that there is palm print which looks very familiar to yours.
+                            """);
+                    }
+                    else if (input.StartsWith("u") && input.Contains("hand")
+                        {
+                        handUsed = true;
+
+                        Console.WriteLine("""
+                            You place the hand on the glass. A beam of light appears which fills the room and starts to blind you.
+
+                            A few seconds later the glass disappeared and the key is to be taken out of the box.
+                            """);
+                    }
+                }
+            }
+        }
         private static void PrintRoomDescription3()
         {
             PrintFancyHeading("The Treasure Room");
@@ -138,11 +196,6 @@ namespace Textadventure
             Console.WriteLine("""
                 You enter a room filled with gold and jewels. In the center of the room is a pedestal with a small box on it. 
                 There is also a door leading out of the room.
-                """);
-
-            Console.WriteLine("""
-                Open the box. The box is locked with a combination.
-                The riddle from the first room provides clues to the combination.
                 """);
         }
 
@@ -167,7 +220,34 @@ namespace Textadventure
 
             if (!String.IsNullOrEmpty(input) && allowedCommands.Contains(command))
             {
+                if(input == "x")
+                {
+                    Environment.Exit(0);
+                }
+                else if (input == "a")
+                {
+                    //clear the current console screen and print the current room description again
+                    Console.Clear();
+                    switch (currentRoomNumber) {
+                        case 1:
+                            PrintRoomDescription1();
+                            break;
+                        case 2:
+                            PrintRoomDescription2();
+                            break;
+                        case 3:
+                            PrintRoomDescription3();
+                            break;
+                    }
+                }
+                
+
                 return true;
+            }
+            else if (input == "help")
+            {
+                //todo: Currently always returns the error message when help is entered
+                PrintHelp();
             }
 
             return false;
