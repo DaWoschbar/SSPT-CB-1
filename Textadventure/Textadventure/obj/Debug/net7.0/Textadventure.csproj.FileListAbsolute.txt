@@ -1,0 +1,15 @@
+C:\github\SSPT-CB-1\Textadventure\Textadventure\bin\Debug\net7.0\Textadventure.exe
+C:\github\SSPT-CB-1\Textadventure\Textadventure\bin\Debug\net7.0\Textadventure.deps.json
+C:\github\SSPT-CB-1\Textadventure\Textadventure\bin\Debug\net7.0\Textadventure.runtimeconfig.json
+C:\github\SSPT-CB-1\Textadventure\Textadventure\bin\Debug\net7.0\Textadventure.dll
+C:\github\SSPT-CB-1\Textadventure\Textadventure\bin\Debug\net7.0\Textadventure.pdb
+C:\github\SSPT-CB-1\Textadventure\Textadventure\obj\Debug\net7.0\Textadventure.csproj.AssemblyReference.cache
+C:\github\SSPT-CB-1\Textadventure\Textadventure\obj\Debug\net7.0\Textadventure.GeneratedMSBuildEditorConfig.editorconfig
+C:\github\SSPT-CB-1\Textadventure\Textadventure\obj\Debug\net7.0\Textadventure.AssemblyInfoInputs.cache
+C:\github\SSPT-CB-1\Textadventure\Textadventure\obj\Debug\net7.0\Textadventure.AssemblyInfo.cs
+C:\github\SSPT-CB-1\Textadventure\Textadventure\obj\Debug\net7.0\Textadventure.csproj.CoreCompileInputs.cache
+C:\github\SSPT-CB-1\Textadventure\Textadventure\obj\Debug\net7.0\Textadventure.dll
+C:\github\SSPT-CB-1\Textadventure\Textadventure\obj\Debug\net7.0\refint\Textadventure.dll
+C:\github\SSPT-CB-1\Textadventure\Textadventure\obj\Debug\net7.0\Textadventure.pdb
+C:\github\SSPT-CB-1\Textadventure\Textadventure\obj\Debug\net7.0\Textadventure.genruntimeconfig.cache
+C:\github\SSPT-CB-1\Textadventure\Textadventure\obj\Debug\net7.0\ref\Textadventure.dll
