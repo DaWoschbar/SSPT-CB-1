@@ -208,33 +208,37 @@ namespace Textadventure
         private static bool CheckInput(string input)
         {
 
-            string command = input[0].ToString();
+            
 
-            if (!String.IsNullOrEmpty(input) && allowedCommands.Contains(command))
+            if (!String.IsNullOrEmpty(input))
             {
-                if(input == "x")
+                string command = input[0].ToString();
+                if (!String.IsNullOrEmpty(input))
                 {
-                    Environment.Exit(0);
-                }
-                else if (input == "a")
-                {
-                    //clear the current console screen and print the current room description again
-                    Console.Clear();
-                    switch (currentRoomNumber) {
-                        case 1:
-                            PrintRoomDescription1();
-                            break;
-                        case 2:
-                            PrintRoomDescription2();
-                            break;
-                        case 3:
-                            PrintRoomDescription3();
-                            break;
+                    if (input == "x")
+                    {
+                        Environment.Exit(0);
                     }
+                    else if (input == "a")
+                    {
+                        //clear the current console screen and print the current room description again
+                        Console.Clear();
+                        switch (currentRoomNumber)
+                        {
+                            case 1:
+                                PrintRoomDescription1();
+                                break;
+                            case 2:
+                                PrintRoomDescription2();
+                                break;
+                            case 3:
+                                PrintRoomDescription3();
+                                break;
+                        }
+                    }
+                    return true;
                 }
-                
-
-                return true;
+                return false;
             }
             else if (input == "help")
             {
@@ -254,6 +258,7 @@ namespace Textadventure
                 Thread.Sleep(25);
             }
             Thread.Sleep(500);
+            Console.WriteLine();
         }
         private static void PrintError()
         {
