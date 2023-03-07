@@ -12,46 +12,43 @@ namespace Textadventure
         private static int currentRoomNumber = 1;
         static void Main(string[] args)
         {
-
+            //the delay below is just so that the user is not fronted with a bunch of text and won't be overwhelmed
             PrintIntroduction();
-            Thread.Sleep(2);
             PrintHelp();
-            Thread.Sleep(2);
             Room1();
             Room2();
             Room3();
             PrintEnding();
+            
 
         }
 
         private static void PrintHelp()
         {
             Console.WriteLine("\n");
-            Console.WriteLine("a\t... clear console and redescribe the current room");
+            Console.WriteLine("a\t\t... clear console and redescribe the current room");
             Console.WriteLine("u [item]\t ... use an item");
-            Console.WriteLine("n\t... go north");
-            Console.WriteLine("w\t... go west");
-            Console.WriteLine("e\t... to east");
-            Console.WriteLine("s\t... go south");
-            Console.WriteLine("x\t... end your adventure (exit)");
-            Console.WriteLine("help\t... this help screen");
+            Console.WriteLine("n\t\t... go north");
+            Console.WriteLine("w\t\t... go west");
+            Console.WriteLine("e\t\t... to east");
+            Console.WriteLine("s\t\t... go south");
+            Console.WriteLine("x\t\t... end your adventure (exit)");
+            Console.WriteLine("help\t\t... this help screen");
         }
-
         private static void PrintIntroduction()
         {
             Console.WriteLine("The Quest for the Golden Key - a textadventure done by Roman Schabus");
-            Console.WriteLine("\n You are in a Castle. There are three different rooms each containing two puzzles to solve in order to reacht the next room\n");
+            WriteStory("\n You are in a Castle. There are three different rooms each containing two puzzles to solve in order to reacht the next room\n");
 
-            Console.WriteLine("""
+            WriteStory("""
                 You are a treasure hunter on a mission to find the Golden Key, an ancient artifact that unlocks a legendary treasure trove. 
                 Legend has it that the key is hidden deep within a labyrinthine castle, guarded by traps and puzzles. 
                 Your mission is to navigate through the castle, solve the puzzles, and find the Golden Key.
                 """);
 
-            Console.WriteLine("Good luck on your quest!");
+            WriteStory("Good luck on your quest!");
 
         }
-
         private static void Room1()
         {
             bool keyFound = false;
@@ -71,7 +68,7 @@ namespace Textadventure
                 {
                     if (input.Contains("sword"))
                     {
-                        Console.WriteLine("""
+                        WriteStory("""
                         The sword has been pulled and the helmet of the knight opens. 
                         It contains a key. You take the key and put it in your pockets.
                         """);
@@ -86,7 +83,7 @@ namespace Textadventure
                 
                 if (keyFound && input == "e")
                 {
-                    Console.WriteLine("You find yourself looking at a locked door.");
+                    WriteStory("You find yourself looking at a locked door.");
 
                     while(true)
                     {
@@ -105,20 +102,18 @@ namespace Textadventure
                     break;
                 }
             }
-            Console.WriteLine("You open the door and walk into the other room.");
+            WriteStory("You open the door and walk into the other room.");
         }
-
         private static void PrintRoomDescription1()
         {
             PrintFancyHeading("The Entrance Hall");
 
-            Console.WriteLine("""
+            WriteStory("""
                 You enter the castle through a grand entrance hall. 
                 In the center of the room is a large statue of a knight, holding a sword that looks like it can be used.
                 To the right is a door leading to the next room. Find the key that opens the door.
                 """);
         }
-
         private static void Room2()
         {
             currentRoomNumber++;
@@ -132,7 +127,7 @@ namespace Textadventure
 
                 if (input.StartsWith("u") && input.Contains("chess"))
                 {
-                    Console.WriteLine("""
+                    WriteStory("""
                        You move the chess piece entlong the weird lines to the end. 
                        Suddenly the room starts to shake and the boulder beings to move towards the right side of the room revealing an entrance to another part of the castle.
                        """);
@@ -140,17 +135,16 @@ namespace Textadventure
                 }
                 else if (input.StartsWith("n") && boulderMoved)
                 {
-                    Console.WriteLine("You walk towards the entrance and walk right through it.");
+                    WriteStory("You walk towards the entrance and walk right through it.");
                     break;
                 }
             }
         }
-
         private static void PrintRoomDescription2()
         {
             PrintFancyHeading("The Puzzle Room");
 
-            Console.WriteLine("""
+            WriteStory("""
                 You enter a room filled with puzzles. In the center of the room is a large chessboard. 
                 On the chessboard is a single chess piece right in the middle. The cheesboard is kind of strange, it has some weird lines on it.
                 Behind the board is a boulder which seems unmoveable by a normal human being.
@@ -161,8 +155,6 @@ namespace Textadventure
             currentRoomNumber++;
             PrintRoomDescription3();
 
-            bool handUsed = false;
-
             while (true)
             {
                 string input = Console.ReadLine().ToLower();
@@ -171,20 +163,20 @@ namespace Textadventure
                 {
                     if (input.StartsWith("n"))
                     {
-                        Console.WriteLine("""
+                        WriteStory("""
                             You walk towards the box and find the golden key. It's aura is almost frighenting, but the key itself shines in a nice golden tone.
                             But it is behind some glass that cannot be destroyed. After inspecting the glass some more you realize that there is palm print which looks very familiar to yours.
                             """);
                     }
-                    else if (input.StartsWith("u") && input.Contains("hand")
+                    else if (input.StartsWith("u") && input.Contains("hand"))
                         {
-                        handUsed = true;
 
-                        Console.WriteLine("""
+                        WriteStory("""
                             You place the hand on the glass. A beam of light appears which fills the room and starts to blind you.
 
                             A few seconds later the glass disappeared and the key is to be taken out of the box.
                             """);
+                        break;
                     }
                 }
             }
@@ -193,26 +185,23 @@ namespace Textadventure
         {
             PrintFancyHeading("The Treasure Room");
 
-            Console.WriteLine("""
+            WriteStory("""
                 You enter a room filled with gold and jewels. In the center of the room is a pedestal with a small box on it. 
                 There is also a door leading out of the room.
                 """);
         }
-
         private static void PrintEnding()
         {
-            Console.WriteLine("""
+            WriteStory("""
                 Once the box is opened you find the golden key. The golden key is then used to open the door behind the pedestal. 
                 You escape the castle not only to tell a great story, but also with the might you earned throught your journy. 
                 Good luck on your next adventure!
                 """);
         }
-
         private static void PrintFancyHeading(string text)
         {
             Console.WriteLine($"\n\n################# {text} #################\n\n");
         }
-
         private static bool CheckInput(string input)
         {
 
@@ -252,9 +241,19 @@ namespace Textadventure
 
             return false;
         }
+        
+        private static void WriteStory(string text)
+        {
+            foreach (char c in text)
+            {
+                Console.Write(c);
+                Thread.Sleep(25);
+            }
+            Thread.Sleep(500);
+        }
         private static void PrintError()
         {
             Console.WriteLine("That did not work.");
         }
-    }
+    }    
 }
