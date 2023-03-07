@@ -15,12 +15,12 @@ namespace Textadventure
             //the delay below is just so that the user is not fronted with a bunch of text and won't be overwhelmed
             PrintIntroduction();
             PrintHelp();
+            Console.WriteLine("\nPress any key to start your journey...\n");
+            Console.ReadKey();
             Room1();
             Room2();
             Room3();
             PrintEnding();
-            
-
         }
 
         private static void PrintHelp()
@@ -37,13 +37,13 @@ namespace Textadventure
         }
         private static void PrintIntroduction()
         {
-            Console.WriteLine("The Quest for the Golden Key - a textadventure done by Roman Schabus");
-            WriteStory("\n You are in a Castle. There are three different rooms each containing two puzzles to solve in order to reacht the next room\n");
+            Console.WriteLine("The Quest for the Golden Key - a text adventure done by Roman Schabus");
+            WriteStory("\nYou are in a Castle. There are three different rooms each containing two puzzles to solve in order to reach the next room\n");
 
             WriteStory("""
                 You are a treasure hunter on a mission to find the Golden Key, an ancient artifact that unlocks a legendary treasure trove. 
                 Legend has it that the key is hidden deep within a labyrinthine castle, guarded by traps and puzzles. 
-                Your mission is to navigate through the castle, solve the puzzles, and find the Golden Key.
+                Your mission is to navigate through the castle, solve the puzzles, and find the Golden Key. Since the chest is already in your possession, all that's left to do is finding the key that opens it...
                 """);
 
             WriteStory("Good luck on your quest!");
@@ -200,7 +200,7 @@ namespace Textadventure
         }
         private static void PrintFancyHeading(string text)
         {
-            Console.WriteLine($"\n\n################# {text} #################\n\n");
+            Console.WriteLine($"\n\n################# {text} #################");
         }
         private static bool CheckInput(string input)
         {
@@ -244,6 +244,7 @@ namespace Textadventure
         
         private static void WriteStory(string text)
         {
+            Console.WriteLine();
             foreach (char c in text)
             {
                 Console.Write(c);
