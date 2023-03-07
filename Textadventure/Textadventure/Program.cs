@@ -206,10 +206,7 @@ namespace Textadventure
             Console.WriteLine($"\n\n################# {text} #################");
         }
         private static bool CheckInput(string input)
-        {
-
-            
-
+        { 
             if (!String.IsNullOrEmpty(input))
             {
                 string command = input[0].ToString();
@@ -236,16 +233,15 @@ namespace Textadventure
                                 break;
                         }
                     }
+                    else if (input == "help")
+                    {
+                        //todo: Currently always returns the error message when help is entered
+                        PrintHelp();
+                    }
                     return true;
                 }
                 return false;
             }
-            else if (input == "help")
-            {
-                //todo: Currently always returns the error message when help is entered
-                PrintHelp();
-            }
-
             return false;
         }
         
