@@ -1,0 +1,15 @@
+C:\github\SSPT-CB-1\WikipediaCheck\WikipediaCheck\bin\Debug\net7.0\WikipediaCheck.exe
+C:\github\SSPT-CB-1\WikipediaCheck\WikipediaCheck\bin\Debug\net7.0\WikipediaCheck.deps.json
+C:\github\SSPT-CB-1\WikipediaCheck\WikipediaCheck\bin\Debug\net7.0\WikipediaCheck.runtimeconfig.json
+C:\github\SSPT-CB-1\WikipediaCheck\WikipediaCheck\bin\Debug\net7.0\WikipediaCheck.dll
+C:\github\SSPT-CB-1\WikipediaCheck\WikipediaCheck\bin\Debug\net7.0\WikipediaCheck.pdb
+C:\github\SSPT-CB-1\WikipediaCheck\WikipediaCheck\obj\Debug\net7.0\WikipediaCheck.csproj.AssemblyReference.cache
+C:\github\SSPT-CB-1\WikipediaCheck\WikipediaCheck\obj\Debug\net7.0\WikipediaCheck.GeneratedMSBuildEditorConfig.editorconfig
+C:\github\SSPT-CB-1\WikipediaCheck\WikipediaCheck\obj\Debug\net7.0\WikipediaCheck.AssemblyInfoInputs.cache
+C:\github\SSPT-CB-1\WikipediaCheck\WikipediaCheck\obj\Debug\net7.0\WikipediaCheck.AssemblyInfo.cs
+C:\github\SSPT-CB-1\WikipediaCheck\WikipediaCheck\obj\Debug\net7.0\WikipediaCheck.csproj.CoreCompileInputs.cache
+C:\github\SSPT-CB-1\WikipediaCheck\WikipediaCheck\obj\Debug\net7.0\WikipediaCheck.dll
+C:\github\SSPT-CB-1\WikipediaCheck\WikipediaCheck\obj\Debug\net7.0\refint\WikipediaCheck.dll
+C:\github\SSPT-CB-1\WikipediaCheck\WikipediaCheck\obj\Debug\net7.0\WikipediaCheck.pdb
+C:\github\SSPT-CB-1\WikipediaCheck\WikipediaCheck\obj\Debug\net7.0\WikipediaCheck.genruntimeconfig.cache
+C:\github\SSPT-CB-1\WikipediaCheck\WikipediaCheck\obj\Debug\net7.0\ref\WikipediaCheck.dll
