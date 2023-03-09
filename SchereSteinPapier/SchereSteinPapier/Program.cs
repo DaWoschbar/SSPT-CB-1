@@ -18,68 +18,98 @@
             Console.WriteLine("Schere Stein Papier");
             while (true)
             {
-                PrintOptions();
-                int playerSelection = GetPlayerSelection();
-
-                if (playerSelection == -1)
+                try
                 {
-                    Console.WriteLine("Ungültige Eingabe");
-                    continue;
+                    PrintOptions();
+                    int playerSelection = GetPlayerSelection();
+
+                    if (playerSelection == -1)
+                    {
+                        Console.WriteLine("Ungültige Eingabe");
+                        continue;
+                    }
+                    else if (playerSelection == 0)
+                    {
+                        Environment.Exit(0);
+                    }
+
+                    int computerSelection = GetComputerSelection();
+
+                    DetermineWinner(playerSelection, computerSelection);
+                    Console.Clear();
+                    PrintResults(playerSelection, computerSelection);
                 }
-                else if (playerSelection == 0)
+                catch (Exception ex)
                 {
-                    Environment.Exit(0);
+                    Console.WriteLine("Oh no, ein Fehler ist aufgetreten\n" + ex.Message); ;
                 }
-
-                int computerSelection = GetComputerSelection();
-
-                DetermineWinner(playerSelection, computerSelection);
-                Console.Clear();
-                PrintResults(playerSelection, computerSelection);
             }
         }
 
         private static void DetermineWinner(int player, int computer)
         {
-            if (player == computer)
+            try
             {
-                _ties++;
+                if (player == computer)
+                {
+                    _ties++;
+                }
+                else if ((player == 1 && computer == 2) || (player == 2 && computer == 3) || (player == 3 && computer == 1))
+                {
+                    _winner = "Computer";
+                    _computerWon++;
+                }
+                else
+                {
+                    _winner = "Player";
+                    _playerWon++;
+                }
+                _roundCounter++;
             }
-            else if ((player == 1 && computer == 2) || (player == 2 && computer == 3) || (player == 3 && computer == 1))
+            catch (Exception)
             {
-                _winner = "Computer";
-                _computerWon++;
+
+                throw new Exception();
             }
-            else
-            {
-                _winner = "Player";
-                _playerWon++;
-            }
-            _roundCounter++;
         }
 
         private static int GetComputerSelection()
         {
-            Random rnd = new Random();
-            return rnd.Next(1, 4);
+            try
+            {
+                Random rnd = new Random();
+                return rnd.Next(1, 4);
+            }
+            catch (Exception)
+            {
+
+                throw new Exception();
+            }
         }
 
         private static int GetPlayerSelection()
         {
-            Console.WriteLine("Wählen Sie aus:");
-            string input = Console.ReadLine() ?? "";
-            int res = 0;
+            try
+            {
+                Console.WriteLine("Wählen Sie aus:");
+                string input = Console.ReadLine() ?? "";
+                int res = 0;
 
-            if (String.IsNullOrEmpty(input))
-                return -1;
+                if (String.IsNullOrEmpty(input))
+                    return -1;
 
-            else if(!int.TryParse(input, out res))
-                return -1;
+                else if (!int.TryParse(input, out res))
+                    return -1;
 
-            if (res > 3 || res < 0)
-                return -1;
+                if (res > 3 || res < 0)
+                    return -1;
 
-            return res;
+                return res;
+            }
+            catch (Exception)
+            {
+                throw Exception();
+            }
         }
 
         private static void PrintOptions()
@@ -94,17 +124,25 @@
 
         private static void PrintResults(int valuePlayer, int valueComputer)
         {
-            string player = _selection[valuePlayer];
-            string computer = _selection[valueComputer];
+            try
+            {
+                string player = _selection[valuePlayer];
+                string computer = _selection[valueComputer];
 
-            Console.WriteLine("-----------------------------------------");
-            Console.WriteLine($"Round\t\t\t: {_roundCounter}");
-            Console.WriteLine($"Spieler\t\t\t: {player}");
-            Console.WriteLine($"Computer\t\t: {computer}");
-            Console.WriteLine($"Gewinner\t\t: {_winner}");
-            Console.WriteLine($"Spielstand\t\t: Player {_playerWon}\t Computer: {_computerWon}");
-            Console.WriteLine($"Unentschieden\t\t: {_ties}");
-            Console.WriteLine("-----------------------------------------");
+                Console.WriteLine("-----------------------------------------");
+                Console.WriteLine($"Round\t\t\t: {_roundCounter}");
+                Console.WriteLine($"Spieler\t\t\t: {player}");
+                Console.WriteLine($"Computer\t\t: {computer}");
+                Console.WriteLine($"Gewinner\t\t: {_winner}");
+                Console.WriteLine($"Spielstand\t\t: Player {_playerWon}\t Computer: {_computerWon}");
+                Console.WriteLine($"Unentschieden\t\t: {_ties}");
+                Console.WriteLine("-----------------------------------------");
+            }
+            catch (Exception)
+            {
+
+                throw new Exception();
+            }
         }
     }
 }
