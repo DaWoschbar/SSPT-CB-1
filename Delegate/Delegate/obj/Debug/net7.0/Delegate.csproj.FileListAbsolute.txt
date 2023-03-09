@@ -1,0 +1,15 @@
+C:\github\SSPT-CB-1\Delegate\Delegate\bin\Debug\net7.0\Delegate.exe
+C:\github\SSPT-CB-1\Delegate\Delegate\bin\Debug\net7.0\Delegate.deps.json
+C:\github\SSPT-CB-1\Delegate\Delegate\bin\Debug\net7.0\Delegate.runtimeconfig.json
+C:\github\SSPT-CB-1\Delegate\Delegate\bin\Debug\net7.0\Delegate.dll
+C:\github\SSPT-CB-1\Delegate\Delegate\bin\Debug\net7.0\Delegate.pdb
+C:\github\SSPT-CB-1\Delegate\Delegate\obj\Debug\net7.0\Delegate.csproj.AssemblyReference.cache
+C:\github\SSPT-CB-1\Delegate\Delegate\obj\Debug\net7.0\Delegate.GeneratedMSBuildEditorConfig.editorconfig
+C:\github\SSPT-CB-1\Delegate\Delegate\obj\Debug\net7.0\Delegate.AssemblyInfoInputs.cache
+C:\github\SSPT-CB-1\Delegate\Delegate\obj\Debug\net7.0\Delegate.AssemblyInfo.cs
+C:\github\SSPT-CB-1\Delegate\Delegate\obj\Debug\net7.0\Delegate.csproj.CoreCompileInputs.cache
+C:\github\SSPT-CB-1\Delegate\Delegate\obj\Debug\net7.0\Delegate.dll
+C:\github\SSPT-CB-1\Delegate\Delegate\obj\Debug\net7.0\refint\Delegate.dll
+C:\github\SSPT-CB-1\Delegate\Delegate\obj\Debug\net7.0\Delegate.pdb
+C:\github\SSPT-CB-1\Delegate\Delegate\obj\Debug\net7.0\Delegate.genruntimeconfig.cache
+C:\github\SSPT-CB-1\Delegate\Delegate\obj\Debug\net7.0\ref\Delegate.dll

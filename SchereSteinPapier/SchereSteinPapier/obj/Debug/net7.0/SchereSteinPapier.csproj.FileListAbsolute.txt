@@ -1,0 +1,15 @@
+C:\github\SSPT-CB-1\SchereSteinPapier\SchereSteinPapier\bin\Debug\net7.0\SchereSteinPapier.exe
+C:\github\SSPT-CB-1\SchereSteinPapier\SchereSteinPapier\bin\Debug\net7.0\SchereSteinPapier.deps.json
+C:\github\SSPT-CB-1\SchereSteinPapier\SchereSteinPapier\bin\Debug\net7.0\SchereSteinPapier.runtimeconfig.json
+C:\github\SSPT-CB-1\SchereSteinPapier\SchereSteinPapier\bin\Debug\net7.0\SchereSteinPapier.dll
+C:\github\SSPT-CB-1\SchereSteinPapier\SchereSteinPapier\bin\Debug\net7.0\SchereSteinPapier.pdb
+C:\github\SSPT-CB-1\SchereSteinPapier\SchereSteinPapier\obj\Debug\net7.0\SchereSteinPapier.csproj.AssemblyReference.cache
+C:\github\SSPT-CB-1\SchereSteinPapier\SchereSteinPapier\obj\Debug\net7.0\SchereSteinPapier.GeneratedMSBuildEditorConfig.editorconfig
+C:\github\SSPT-CB-1\SchereSteinPapier\SchereSteinPapier\obj\Debug\net7.0\SchereSteinPapier.AssemblyInfoInputs.cache
+C:\github\SSPT-CB-1\SchereSteinPapier\SchereSteinPapier\obj\Debug\net7.0\SchereSteinPapier.AssemblyInfo.cs
+C:\github\SSPT-CB-1\SchereSteinPapier\SchereSteinPapier\obj\Debug\net7.0\SchereSteinPapier.csproj.CoreCompileInputs.cache
+C:\github\SSPT-CB-1\SchereSteinPapier\SchereSteinPapier\obj\Debug\net7.0\SchereSteinPapier.dll
+C:\github\SSPT-CB-1\SchereSteinPapier\SchereSteinPapier\obj\Debug\net7.0\refint\SchereSteinPapier.dll
+C:\github\SSPT-CB-1\SchereSteinPapier\SchereSteinPapier\obj\Debug\net7.0\SchereSteinPapier.pdb
+C:\github\SSPT-CB-1\SchereSteinPapier\SchereSteinPapier\obj\Debug\net7.0\SchereSteinPapier.genruntimeconfig.cache
+C:\github\SSPT-CB-1\SchereSteinPapier\SchereSteinPapier\obj\Debug\net7.0\ref\SchereSteinPapier.dll

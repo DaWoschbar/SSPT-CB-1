@@ -1,7 +1,4 @@
-asdf
-well
-this
-is
-a
+todos.txt
 nice
-todolist
+it
+works
