@@ -1,44 +1,100 @@
-﻿using System.Runtime.InteropServices;
+﻿using System.Net.NetworkInformation;
+using System.Runtime.InteropServices;
 
 namespace PingList
 {
     internal class Program
     {
+        //field for the log file
+        private static string _logPath = @"log.txt";
+
         static void Main(string[] args)
         {
-            if (args.Length == 0)
+            try
             {
-                Console.WriteLine("Missing Input");
-                PrintExample();
-            }
-            else
-            {
-                string arg1 = args[0];
-                string filename = args[1];
-
-                if(!ValidateParameters(arg1, filename))
+                if (args.Length == 0)
                 {
-                    Console.WriteLine("");
+                    Console.WriteLine("Missing Input");
+                    PrintExample();
                 }
                 else
                 {
-                    int iterations;
+                    string arg1 = args[0];
+                    string filename = args[1];
 
-                    if(int.TryParse(arg1, out iterations))
+                    if (!ValidateParameters(arg1, filename))
                     {
-                        ExecutePingOperation(iterations, filename);
+                        Console.WriteLine("");
                     }
                     else
                     {
-                        Console.WriteLine("Iteration is not a number!");
+                        int iterations;
+
+                        if (int.TryParse(arg1, out iterations))
+                        {
+                            ExecutePingOperation(iterations, filename);
+                        }
+                        else
+                        {
+                            Console.WriteLine("Iteration is not a number!");
+                        }
                     }
                 }
+
             }
+            catch (Exception ex)
+            {
+
+                Console.WriteLine("Unkown Error\n" + ex.Message);
+            }
+
         }
 
         private static void ExecutePingOperation(int iterations, string filename)
         {
-            throw new NotImplementedException();
+            try
+            {
+                for (int i = 0; i < iterations; i++)
+                {
+                    foreach (string line in File.ReadAllLines(filename))
+                    {
+                        DateTime dt = DateTime.Now;
+                        Console.ForegroundColor = ConsoleColor.White;
+                        try
+                        {
+                            //Setting the timeout to 3000ms = 3s
+                            PingReply result = new Ping().Send(line, 3000);
+
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            string message = $"{dt} OK {line}";
+                            Console.WriteLine(message);
+                            LogResult(message);
+                        }
+                        // If the ping should not reach the targeted host we catch the exception and print out the result
+                        catch (PingException)
+                        {
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            string message = $"{dt} NOK {line}";
+                            Console.WriteLine(message);
+                            LogResult(message);
+                        }
+                        finally
+                        {
+                            Console.ForegroundColor = ConsoleColor.White;
+                        }
+                    }
+                }
+            }
+            catch (Exception)
+            {
+
+                throw new Exception();
+            }
+        }
+
+        private static void LogResult(string message)
+        {
+            File.AppendAllText(_logPath, message + "\n");
         }
 
         private static void PrintExample()

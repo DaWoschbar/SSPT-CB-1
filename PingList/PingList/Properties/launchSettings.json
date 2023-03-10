@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "PingList": {
+      "commandName": "Project",
+      "commandLineArgs": "2 input.txt"
+    }
+  }
+}

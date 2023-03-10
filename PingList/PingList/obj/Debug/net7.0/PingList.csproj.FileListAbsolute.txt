@@ -1,0 +1,15 @@
+C:\github\SSPT-CB-1\PingList\PingList\bin\Debug\net7.0\PingList.exe
+C:\github\SSPT-CB-1\PingList\PingList\bin\Debug\net7.0\PingList.deps.json
+C:\github\SSPT-CB-1\PingList\PingList\bin\Debug\net7.0\PingList.runtimeconfig.json
+C:\github\SSPT-CB-1\PingList\PingList\bin\Debug\net7.0\PingList.dll
+C:\github\SSPT-CB-1\PingList\PingList\bin\Debug\net7.0\PingList.pdb
+C:\github\SSPT-CB-1\PingList\PingList\obj\Debug\net7.0\PingList.csproj.AssemblyReference.cache
+C:\github\SSPT-CB-1\PingList\PingList\obj\Debug\net7.0\PingList.GeneratedMSBuildEditorConfig.editorconfig
+C:\github\SSPT-CB-1\PingList\PingList\obj\Debug\net7.0\PingList.AssemblyInfoInputs.cache
+C:\github\SSPT-CB-1\PingList\PingList\obj\Debug\net7.0\PingList.AssemblyInfo.cs
+C:\github\SSPT-CB-1\PingList\PingList\obj\Debug\net7.0\PingList.csproj.CoreCompileInputs.cache
+C:\github\SSPT-CB-1\PingList\PingList\obj\Debug\net7.0\PingList.dll
+C:\github\SSPT-CB-1\PingList\PingList\obj\Debug\net7.0\refint\PingList.dll
+C:\github\SSPT-CB-1\PingList\PingList\obj\Debug\net7.0\PingList.pdb
+C:\github\SSPT-CB-1\PingList\PingList\obj\Debug\net7.0\PingList.genruntimeconfig.cache
+C:\github\SSPT-CB-1\PingList\PingList\obj\Debug\net7.0\ref\PingList.dll
