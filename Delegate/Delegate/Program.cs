@@ -122,7 +122,7 @@ namespace Delegate
         private static bool MonthInMartriculationNumber(string marticularnumber, DateTime date)
         {
             string year = date.Year.ToString();
-            if (marticularnumber[2] == year[0] && marticularnumber[3] == year[1])
+            if (marticularnumber[2] == year[2] && marticularnumber[3] == year[3])
                 return true;
             else
                 return false;
