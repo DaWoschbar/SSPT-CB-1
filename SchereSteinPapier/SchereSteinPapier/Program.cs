@@ -108,7 +108,7 @@
             }
             catch (Exception)
             {
-                throw Exception();
+                throw new Exception();
             }
         }
 
